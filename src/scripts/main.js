@@ -39,3 +39,9 @@ for (let i = 0; i < employees.length; i++) {
   employees[i].dataset.age = sortedEmployees[i].age;
   employees[i].dataset.salary = sortedEmployees[i].salary;
 }
+
+const ul = document.querySelector('ul');
+const sortedList = sortList(employees);
+
+ul.innerHTML = '';
+sortedList.forEach((li) => ul.appendChild(li));
